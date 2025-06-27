@@ -1,69 +1,59 @@
-/* mobilestyles.css: Mobile-specific styles for responsive design */
-
+/* Mobile-specific styles: up to 600px */
 @media (max-width: 600px) {
-    body {
-        font-size: 1.05em;
-        padding: 0;
-    }
+    body { font-size: 1.05em; padding: 0; }
+    header { padding: 0.75rem 1rem; text-align: center; }
+    .logo { flex-direction: column; gap: 0.5rem !important; }
+    nav { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+    nav a { margin: 0; padding: 0.5rem 1.2rem; display: block; border-radius: 6px; background: #333; color: #fff; }
+    .hero-content { flex-direction: column; gap: 1rem; text-align: center; }
+    .about-content, .contact-content { flex-direction: column; gap: 1rem; }
+    .service-cards, .testimonial-cards { flex-direction: column; gap: 1rem; }
+    main { padding: 0.5rem; }
+    .contact form, .contact-info { width: 100%; }
+    footer { font-size: 0.95em; padding: 0.5rem; position: static; border-radius: 0; }
+}
 
-    header {
-        padding: 0.75rem 1rem;
-        text-align: center;
+/* Tablet styles: 601px to 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    body { font-size: 1.1em; }
+    header { padding: 1rem 2rem; }
+    .logo { flex-direction: row; gap: 1rem !important; }
+    nav { flex-direction: row; gap: 1.5rem; }
+    nav a { padding: 0.6rem 1.5rem; }
+    .hero-content, .about-content, .contact-content, .service-cards, .testimonial-cards {
+        flex-direction: row;
+        gap: 1.5rem;
+        text-align: left;
     }
+    main { padding: 1rem; }
+    .contact form, .contact-info { width: 48%; }
+    footer { font-size: 1em; padding: 1rem; }
+}
 
-    .logo {
-        flex-direction: column;
-        gap: 0.5rem !important;
+/* Desktop styles: 901px to 1200px */
+@media (min-width: 901px) and (max-width: 1200px) {
+    body { font-size: 1.15em; }
+    header { padding: 1.5rem 4rem; }
+    nav { gap: 2rem; }
+    .hero-content, .about-content, .contact-content, .service-cards, .testimonial-cards {
+        flex-direction: row;
+        gap: 2rem;
     }
+    main { padding: 2rem; }
+    .contact form, .contact-info { width: 45%; }
+    footer { font-size: 1.05em; padding: 1.5rem; }
+}
 
-    nav {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        align-items: center;
+/* Large desktop styles: above 1200px */
+@media (min-width: 1201px) {
+    body { font-size: 1.18em; }
+    header { padding: 2rem 8rem; }
+    nav { gap: 2.5rem; }
+    .hero-content, .about-content, .contact-content, .service-cards, .testimonial-cards {
+        flex-direction: row;
+        gap: 2.5rem;
     }
-
-    nav a {
-        margin: 0;
-        padding: 0.5rem 1.2rem;
-        display: block;
-        border-radius: 6px;
-        background: #333;
-        color: #fff;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .about-content,
-    .contact-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .service-cards,
-    .testimonial-cards {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    main {
-        padding: 0.5rem;
-    }
-
-    .contact form,
-    .contact-info {
-        width: 100%;
-    }
-
-    footer {
-        font-size: 0.95em;
-        padding: 0.5rem;
-        position: static;
-        border-radius: 0;
-    }
+    main { padding: 3rem 12vw; }
+    .contact form, .contact-info { width: 40%; }
+    footer { font-size: 1.1em; padding: 2rem; }
 }
